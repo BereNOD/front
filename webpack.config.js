@@ -1,12 +1,13 @@
 const webpack = require("webpack");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
+  watch: true,
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -70,12 +71,12 @@ const config = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: require("html-webpack-template"),
-      inject: false,
-      appMountId: "app",
-      filename: "index.html",
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: require("html-webpack-template"),
+    //   inject: false,
+    //   appMountId: "app",
+    //   filename: "index.html",
+    // }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),
     new BundleAnalyzerPlugin({

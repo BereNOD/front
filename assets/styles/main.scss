@@ -1,0 +1,18 @@
+@import "vendors/_card.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.popular_container {
+  margin: 124px;
+  width: 100%;
+}
+.popular_title {
+  margin-left: 152px;
+}

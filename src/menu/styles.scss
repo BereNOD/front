@@ -11,13 +11,13 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../menu/imageMenu/background.png);  
-    font-weight: 500;  
+    background-image: url(./menu/imageMenu/background.png);  
+    font-weight: 500;
     font-size: 15px;
 }
 
 .categoryAnimal:hover {
-    background-image: url(../menu/imageMenu/pattern2.png);
+    background-image: url(./menu/imageMenu/pattern2.png);
 }
 .imageIcon {
    height: 32px;

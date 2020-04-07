@@ -1,22 +1,19 @@
 const webpack = require("webpack");
 const path = require("path");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
-  watch: true,
-  entry: "./src/index.js",
+  entry: ["react-hot-loader/patch", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].js?hash=[contenthash]",
+    filename: "[name].[contenthash].js",
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         use: "babel-loader",
         exclude: /node_modules/,
       },
@@ -54,6 +51,10 @@ const config = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"],
+      },
+      {
         test: /\.svg$/,
         use: "file-loader",
       },
@@ -70,21 +71,25 @@ const config = {
       },
     ],
   },
+  resolve: {
+    extensions: [".js", ".jsx"],
+    alias: {
+      "react-dom": "@hot-loader/react-dom",
+    },
+  },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: require("html-webpack-template"),
-    //   inject: false,
-    //   appMountId: "app",
-    //   filename: "index.html",
-    // }),
+    new HtmlWebpackPlugin({
+      template: require("html-webpack-template"),
+      inject: true,
+      appMountId: "app",
+    }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerMode: "static",
-      openAnalyzer: false,
-    }),
     new MiniCssExtractPlugin(),
   ],
+  devServer: {
+    contentBase: "./dist",
+  },
   optimization: {
     runtimeChunk: "single",
     splitChunks: {
@@ -99,4 +104,11 @@ const config = {
   },
 };
 
-module.exports = config;
+module.exports = (env, argv) => {
+  if (argv.hot) {
+    // Cannot use 'contenthash' when hot reloading is enabled.
+    config.output.filename = "[name].[hash].js";
+  }
+
+  return config;
+};

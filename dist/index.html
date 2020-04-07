@@ -1,1156 +1,1017 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="../src/header/style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <body>
-    <header class="Header">
-      <div class="Top_header">
-        <div class="Logo_Wrapper">
-          <img src="../src/header/kenguru/logo.png" alt="logo" width="225px" height="68px">
-        </div>
-        <div class="Contacts_Wrapper">
-          <img src="../src/header/kenguru/contacts.png" alt="contacts_wrapper" width="150px" height="45px">
-        </div>
-        <div class="Search">
-          <form class="form-inline my-2 my-lg-0">
-            <input id="Search_product" class="form-control mr-sm-2" type="search" placeholder="Поиск по товарам" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
-          </form>
-        </div>
-        <div class="Profile">
-          <img src="../src/header/kenguru/profile.png" alt="profile" width="150px" height="30px">
-        </div>
-        <div class="Cart_Container">
-          <img src="../src/header/kenguru/cart.png" alt="cart">
-        </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../src/header/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="Header">
+    <div class="Top_header">
+      <div class="Logo_Wrapper">
+        <img src="../src/header/kenguru/logo.png" alt="logo" width="225px" height="68px">
       </div>
+      <div class="Contacts_Wrapper">
+        <img src="../src/header/kenguru/contacts.png" alt="contacts_wrapper" width="150px" height="45px">
       </div>
-      <div class="menu">
-        <div class="categoryAnimal firstLeftAnimal" title="Кошки">
-          <img src="../src/menu/imageMenu/cat-icon.svg" alt="" class="imageIcon">
-          <span class="imageText">Кошки</span>
-        </div>
-        <div class="categoryAnimal" title="Собаки">
-          <img src="../src/menu/imageMenu/dog-icon.png" alt="" class="imageIcon">
-          <span class="imageText">Собаки</span>
-        </div>
-        <div class="categoryAnimal" title="Грызуны">
-          <img src="../src/menu/imageMenu/mouse-icon.png" alt="" class="imageIcon">
-          <span class="imageText">Грызуны</span>
-        </div>
-        <div class="categoryAnimal" title="Рыбы">
-          <img src="../src/menu/imageMenu/fish-icon.png" alt="" class="imageIcon">
-          <span class="imageText">Рыбы</span>
-        </div>
-        <div class="categoryAnimal" title="Птицы">
-          <img src="../src/menu/imageMenu/chicken-icon.png" alt="" class="imageIcon">
-          <span class="imageText">Птицы</span>
-        </div>
-        <div class="categoryAnimal" title="Сельхоз Животные">
-          <img src="../src/menu/imageMenu/pig-icon.png" alt="" class="imageIcon">
-          <span class="imageText">Сельхоз Животные</span>
-        </div>
+      <div class="Search">
+        <form class="form-inline my-2 my-lg-0">
+          <input id="Search_product" class="form-control mr-sm-2" type="search" placeholder="Поиск по товарам" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+        </form>
       </div>
-    </header>
-    <div class="popular_container">
-      <div class="popular_title">
-        <h2>Популярное</h2>
+      <div class="Profile">
+        <img src="../src/header/kenguru/profile.png" alt="profile" width="150px" height="30px">
       </div>
-      <div class="popular_wrapper">
-        <div class="popular_cards">
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="popular_cards">
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card_header">
-              <div class="card_discount">
-                <button class="discount">-40%</button>
-              </div>
-              <div class="card_picture">
-                <img src="../src/popular/images/product.png" />
-              </div>
-            </div>
-
-            <div class="card_checkboxes">
-              <div class="card_stars">
-                <div class="rating_block">
-                  <input name="rating" value="5" id="rating_5" type="radio" />
-                  <label for="rating_5" class="label_rating"></label>
-
-                  <input name="rating" value="4" id="rating_4" type="radio" />
-                  <label for="rating_4" class="label_rating"></label>
-
-                  <input name="rating" value="3" id="rating_3" type="radio" />
-                  <label for="rating_3" class="label_rating"></label>
-
-                  <input
-                    name="rating"
-                    value="2"
-                    id="rating_2"
-                    type="radio"
-                    checked
-                  />
-                  <label for="rating_2" class="label_rating"></label>
-
-                  <input name="rating" value="1" id="rating_1" type="radio" />
-                  <label for="rating_1" class="label_rating"></label>
-                </div>
-              </div>
-
-              <div class="card_checkbox">
-                <div class="checkbox_block">
-                  <img src="../src/popular/images/check-icon.png" />
-                </div>
-                <div class="checkbox_text"><p>в наличии</p></div>
-              </div>
-            </div>
-
-            <div class="card_text">
-              <p>
-                Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
-                взрослых собак
-              </p>
-            </div>
-
-            <div class="card_weight">
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_4"
-                  type="radio"
-                />
-                <label for="weight_4" class="weight_label"></label>
-                <p class="radio_title">300 гр</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_3"
-                  type="radio"
-                  checked
-                />
-                <label for="weight_3" class="weight_label"></label>
-                <p class="radio_title">1 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_2"
-                  type="radio"
-                />
-                <label for="weight_2" class="weight_label"></label>
-                <p class="radio_title">2 кг</p>
-              </div>
-
-              <div class="radio_info">
-                <input
-                  name="weight"
-                  value="option"
-                  id="weight_1"
-                  type="radio"
-                />
-                <label for="weight_1" class="weight_label"></label>
-                <p class="radio_title">5 кг</p>
-              </div>
-            </div>
-
-            <div class="order_menu">
-              <div class="price">
-                <span class="strikethrough">999 ₽</span>
-                <span class="real_price">222 ₽</span>
-              </div>
-              <div class="cart">
-                <button class="cart_button">В корзину</button>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="Cart_Container">
+        <img src="../src/header/kenguru/cart.png" alt="cart">
       </div>
-    </div><div class="new">
-      <h2 class="new-title">НОВИНКИ</h2>
-      <div class="new-box">
-        <div class="new-item">
-          <div class="item-icon item-icon-promo">
-            <div class="promo-value">-15%</div>
-            <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
-          </div>
-          <div class="item-content">
-            <div class="content-title">
-              <ul class="content-rating">
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos">
-                  <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos">
-                  <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos">
-                  <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
-                </li>
-              </ul>
-              <div class="status">
-                <img src="../src/new/images/check-icon.png" class="status-icon">
-                <div class="status-index">в наличии</div>
-              </div>
-            </div>
-            <div class="content-description">
-              Сухой корм Cat Chow Special Care Sterilized для взрослых кошек, Кастрированные или...
-            </div>
-            <ul class="content-weight">
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">300 гр</div>
-              </li>
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">1 кг</div>
-              </li>
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">2 кг</div>
-              </li>
-              <li class="content-weight-dose">
-                <img src="../src/new/images/print-icon-blue.png" class="content-weight-dose-icon content-weight-dose-icon-active">
-                <div class="content-weight-dose-value">5 кг</div>
-              </li>
-            </ul>
-            <div class="item-total">
-              <div class="total-cost-discount">9999
-                <span class="total-cost-currensy-discount">
-                  <img src="../src/new/images/rouble-sign-d.png" class="total-cost-currense-discount-ru">
-                </span>
-              </div>
-              <div class="total-cost total-cost-promo">9999
-                <span class="total-cost-currensy">
-                  <img src="../src/new/images/rouble-sign-promo.png" class="total-cost-currensy-ru">
-                </span>
-              </div>
-              <button class="total-choose total-choose-promo">В корзину</button>
-            </div>
-          </div>
+    </div>
+    </div>
+    <div class="menu">
+      <div class="categoryAnimal firstLeftAnimal" title="Кошки">
+        <img src="../src/menu/imageMenu/cat-icon.svg" alt="" class="imageIcon">
+        <span class="imageText">Кошки</span>
+      </div>
+      <div class="categoryAnimal" title="Собаки">
+        <img src="../src/menu/imageMenu/dog-icon.png" alt="" class="imageIcon">
+        <span class="imageText">Собаки</span>
+      </div>
+      <div class="categoryAnimal" title="Грызуны">
+        <img src="../src/menu/imageMenu/mouse-icon.png" alt="" class="imageIcon">
+        <span class="imageText">Грызуны</span>
+      </div>
+      <div class="categoryAnimal" title="Рыбы">
+        <img src="../src/menu/imageMenu/fish-icon.png" alt="" class="imageIcon">
+        <span class="imageText">Рыбы</span>
+      </div>
+      <div class="categoryAnimal" title="Птицы">
+        <img src="../src/menu/imageMenu/chicken-icon.png" alt="" class="imageIcon">
+        <span class="imageText">Птицы</span>
+      </div>
+      <div class="categoryAnimal" title="Сельхоз Животные">
+        <img src="../src/menu/imageMenu/pig-icon.png" alt="" class="imageIcon">
+        <span class="imageText">Сельхоз Животные</span>
+      </div>
+    </div>
+  </header>
+  <div class="baner">
+    <div class="container">
+      <img class="kitten_image" src="../src/banner/images/kitten.png">
+      <div class="text">
+        <p class="title">
+          Здоровое питание для кошек
+        </p>
+        <p class="p">
+          Все ли вы знаете о <br> потребностях своей кошки?
+        </p>
+        <form>
+          <button class="left_button">
+            Подобрать корм
+          </button>
+        </form>
+      </div>
+      <div class="right_baner">
+        <div class="background_top_image">
+          <img class="top_image" src="../src/banner/images/grandorf-pack.png">
         </div>
-        <div class="new-item">
-          <div class="item-icon">
-            <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
-          </div>
-          <div class="item-content">
-            <div class="content-title">
-              <ul class="content-rating">
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos">
-                  <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
-                </li>
-              </ul>
-              <div class="status">
-                <img src="../src/new/images/check-icon.png" class="status-icon">
-                <div class="status-index">в наличии</div>
-              </div>
+        <div class="bottom_image">
+          <div class="top_text">
+            <div class="top_left_text">
+              -20%
             </div>
-            <div class="content-description">
-              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для взрослых собак
-            </div>
-            <div class="item-total">
-              <div class="total-cost">99
-                <span class="total-cost-currensy">
-                  <img src="../src/new/images/rouble-sign.png" class="total-cost-currensy-ru">
-                </span>
-              </div>
-              <button class="total-choose">В корзину</button>
+            <div class="top_right_text">
+              на корм для <br> кошек
             </div>
           </div>
-        </div>
-        <div class="new-item">
-          <div class="item-icon">
-            <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
-          </div>
-          <div class="item-content">
-            <div class="content-title">
-              <ul class="content-rating">
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-              </ul>
-              <div class="status">
-                <img src="../src/new/images/check-icon.png" class="status-icon">
-                <div class="status-index">в наличии</div>
-              </div>
+          <div class="bottom_text">
+            <div class="bottom_left_text">
+              в ассортименте <br> 400г, 700г, 800г
             </div>
-            <div class="content-description">
-              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для взрослых собак
-            </div>
-            <div class="item-total">
-              <div class="total-cost">99
-                <span class="total-cost-currensy">
-                  <img src="../src/new/images/rouble-sign.png" class="total-cost-currensy-ru">
-                </span>
-              </div>
-              <button class="total-choose">В корзину</button>
-            </div>
-          </div>
-        </div>
-        <div class="new-item">
-          <div class="item-icon">
-            <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
-          </div>
-          <div class="item-content">
-            <div class="content-title">
-              <ul class="content-rating">
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos content-rating-pos-active">
-                  <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
-                </li>
-                <li class="content-rating-pos">
-                  <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
-                </li>
-              </ul>
-              <div class="status">
-                <img src="../src/new/images/check-icon.png" class="status-icon">
-                <div class="status-index">в наличии</div>
-              </div>
-            </div>
-            <div class="content-description">
-              Сухой корм Dog Chow Adult ягненок рис для взрослых собак
-            </div>
-            <ul class="content-weight">
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">300 гр</div>
-              </li>
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">1 кг</div>
-              </li>
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">2 кг</div>
-              </li>
-              <li class="content-weight-dose">
-                <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
-                <div class="content-weight-dose-value">5 кг</div>
-              </li>
-            </ul>
-            <div class="item-total">
-              <div class="total-cost">9999
-                <span class="total-cost-currensy">
-                  <img src="../src/new/images/rouble-sign.png" class="total-cost-currensy-ru">
-                </span>
-              </div>
-              <button class="total-choose">В корзину</button>
+            <form>
+              <button class="bottom_right_button">
+                В корзину
+              </button>
+            </form>
+            <div class="arrow">
+              <button class="arrow_left">
+                <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.83299 16.1496L9.87307 15.0965L3.6917 8.64454L4.35016 7.95647L4.34717 7.96022L9.8394 2.22855L8.81503 1.15897L1.64221 8.64454L8.83299 16.1496Z" fill="#68D6F4" />
+                  <path d="M8.83299 16.1496L9.87307 15.0965L3.6917 8.64454L4.35016 7.95647L4.34717 7.96022L9.8394 2.22855L8.81503 1.15897L1.64221 8.64454L8.83299 16.1496" stroke="#68D6F4" />
+                </svg>
+              </button>
+              <button class="arrow_right">
+                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.81533 16.1496L0.775245 15.0965L6.95662 8.64454L6.29815 7.95647L6.30114 7.96022L0.808917 2.22855L1.83328 1.15897L9.0061 8.64454L1.81533 16.1496Z" fill="#68D6F4" />
+                  <path d="M1.81533 16.1496L0.775245 15.0965L6.95662 8.64454L6.29815 7.95647L6.30114 7.96022L0.808917 2.22855L1.83328 1.15897L9.0061 8.64454L1.81533 16.1496" stroke="#68D6F4" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="runtime.js"></script>
-    <script src="main.js"></script>
-  </body>
+  </div>
+  <div class="popular_container">
+    <div class="popular_title">
+      <h2>Популярное</h2>
+    </div>
+    <div class="popular_wrapper">
+      <div class="popular_cards">
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popular_cards">
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card_header">
+            <div class="card_discount">
+              <button class="discount">-40%</button>
+            </div>
+            <div class="card_picture">
+              <img src="../src/popular/images/product.png" />
+            </div>
+          </div>
+
+          <div class="card_checkboxes">
+            <div class="card_stars">
+              <div class="rating_block">
+                <input name="rating" value="5" id="rating_5" type="radio" />
+                <label for="rating_5" class="label_rating"></label>
+
+                <input name="rating" value="4" id="rating_4" type="radio" />
+                <label for="rating_4" class="label_rating"></label>
+
+                <input name="rating" value="3" id="rating_3" type="radio" />
+                <label for="rating_3" class="label_rating"></label>
+
+                <input name="rating" value="2" id="rating_2" type="radio" checked />
+                <label for="rating_2" class="label_rating"></label>
+
+                <input name="rating" value="1" id="rating_1" type="radio" />
+                <label for="rating_1" class="label_rating"></label>
+              </div>
+            </div>
+
+            <div class="card_checkbox">
+              <div class="checkbox_block">
+                <img src="../src/popular/images/check-icon.png" />
+              </div>
+              <div class="checkbox_text">
+                <p>в наличии</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card_text">
+            <p>
+              Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для
+              взрослых собак
+            </p>
+          </div>
+
+          <div class="card_weight">
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_4" type="radio" />
+              <label for="weight_4" class="weight_label"></label>
+              <p class="radio_title">300 гр</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_3" type="radio" checked />
+              <label for="weight_3" class="weight_label"></label>
+              <p class="radio_title">1 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_2" type="radio" />
+              <label for="weight_2" class="weight_label"></label>
+              <p class="radio_title">2 кг</p>
+            </div>
+
+            <div class="radio_info">
+              <input name="weight" value="option" id="weight_1" type="radio" />
+              <label for="weight_1" class="weight_label"></label>
+              <p class="radio_title">5 кг</p>
+            </div>
+          </div>
+
+          <div class="order_menu">
+            <div class="price">
+              <span class="strikethrough">999 ₽</span>
+              <span class="real_price">222 ₽</span>
+            </div>
+            <div class="cart">
+              <button class="cart_button">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="new">
+    <h2 class="new-title">НОВИНКИ</h2>
+    <div class="new-box">
+      <div class="new-item">
+        <div class="item-icon item-icon-promo">
+          <div class="promo-value">-15%</div>
+          <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
+        </div>
+        <div class="item-content">
+          <div class="content-title">
+            <ul class="content-rating">
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos">
+                <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos">
+                <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos">
+                <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
+              </li>
+            </ul>
+            <div class="status">
+              <img src="../src/new/images/check-icon.png" class="status-icon">
+              <div class="status-index">в наличии</div>
+            </div>
+          </div>
+          <div class="content-description">
+            Сухой корм Cat Chow Special Care Sterilized для взрослых кошек, Кастрированные или...
+          </div>
+          <ul class="content-weight">
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">300 гр</div>
+            </li>
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">1 кг</div>
+            </li>
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">2 кг</div>
+            </li>
+            <li class="content-weight-dose">
+              <img src="../src/new/images/print-icon-blue.png" class="content-weight-dose-icon content-weight-dose-icon-active">
+              <div class="content-weight-dose-value">5 кг</div>
+            </li>
+          </ul>
+          <div class="item-total">
+            <div class="total-cost-discount">9999
+              <span class="total-cost-currensy-discount">
+                <img src="../src/new/images/rouble-sign-d.png" class="total-cost-currense-discount-ru">
+              </span>
+            </div>
+            <div class="total-cost total-cost-promo">9999
+              <span class="total-cost-currensy">
+                <img src="../src/new/images/rouble-sign-promo.png" class="total-cost-currensy-ru">
+              </span>
+            </div>
+            <button class="total-choose total-choose-promo">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="new-item">
+        <div class="item-icon">
+          <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
+        </div>
+        <div class="item-content">
+          <div class="content-title">
+            <ul class="content-rating">
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos">
+                <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
+              </li>
+            </ul>
+            <div class="status">
+              <img src="../src/new/images/check-icon.png" class="status-icon">
+              <div class="status-index">в наличии</div>
+            </div>
+          </div>
+          <div class="content-description">
+            Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для взрослых собак
+          </div>
+          <div class="item-total">
+            <div class="total-cost">99
+              <span class="total-cost-currensy">
+                <img src="../src/new/images/rouble-sign.png" class="total-cost-currensy-ru">
+              </span>
+            </div>
+            <button class="total-choose">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="new-item">
+        <div class="item-icon">
+          <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
+        </div>
+        <div class="item-content">
+          <div class="content-title">
+            <ul class="content-rating">
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+            </ul>
+            <div class="status">
+              <img src="../src/new/images/check-icon.png" class="status-icon">
+              <div class="status-index">в наличии</div>
+            </div>
+          </div>
+          <div class="content-description">
+            Сухой корм Hill's Science Plan Adult Large Breed Lamb & Rice для взрослых собак
+          </div>
+          <div class="item-total">
+            <div class="total-cost">99
+              <span class="total-cost-currensy">
+                <img src="../src/new/images/rouble-sign.png" class="total-cost-currensy-ru">
+              </span>
+            </div>
+            <button class="total-choose">В корзину</button>
+          </div>
+        </div>
+      </div>
+      <div class="new-item">
+        <div class="item-icon">
+          <img src="../src/new/images/place-for-photo.png" class="item-icon-img">
+        </div>
+        <div class="item-content">
+          <div class="content-title">
+            <ul class="content-rating">
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos content-rating-pos-active">
+                <img src="../src/new/images/star-full.png" class="content-reting-pos-index">
+              </li>
+              <li class="content-rating-pos">
+                <img src="../src/new/images/star-empty.png" class="content-reting-pos-index">
+              </li>
+            </ul>
+            <div class="status">
+              <img src="../src/new/images/check-icon.png" class="status-icon">
+              <div class="status-index">в наличии</div>
+            </div>
+          </div>
+          <div class="content-description">
+            Сухой корм Dog Chow Adult ягненок рис для взрослых собак
+          </div>
+          <ul class="content-weight">
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">300 гр</div>
+            </li>
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">1 кг</div>
+            </li>
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">2 кг</div>
+            </li>
+            <li class="content-weight-dose">
+              <img src="../src/new/images/check-empty.png" class="content-weight-dose-icon">
+              <div class="content-weight-dose-value">5 кг</div>
+            </li>
+          </ul>
+          <div class="item-total">
+            <div class="total-cost">9999
+              <span class="total-cost-currensy">
+                <img src="../src/new/images/rouble-sign.png" class="total-cost-currensy-ru">
+              </span>
+            </div>
+            <button class="total-choose">В корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="runtime.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

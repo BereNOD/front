@@ -7,14 +7,14 @@ body {
 }
 .main__cards {
   display: flex;
+  flex-direction:column-reverse;
   max-width: 650px;
   max-height: 810px;
 
 
 }
 .sale {
-  max-width: 700px;
-  max-height: 900px;
+
 
 
 }

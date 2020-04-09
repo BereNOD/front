@@ -2,10 +2,20 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+
+}
+.main__cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+  max-height: 810px;
+
+
 }
 .sale {
-  display: block;
-  width: 650px;
+  max-width: 700px;
+  max-height: 900px;
 
 
 }
@@ -18,6 +28,8 @@ h2 {
   box-shadow: 0 4px 11px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.06);
   border-radius: 7px;
   background-color: #FFF;
+  margin-right: 26px;
+  margin-bottom: 26px;
 
 }
 .sale__img {
@@ -25,6 +37,7 @@ h2 {
   justify-content: center;
   width: 264px;
   height: 130px;
+  margin: 20px;
 
 }
 .title__img {
@@ -102,6 +115,7 @@ h2 {
   margin: 17px 20px;
 }
 
+
 .weight-table {
   display: flex;
   justify-content: space-around;
@@ -112,13 +126,12 @@ h2 {
   display: block;
   margin-right: 5px;
   cursor: pointer;
-  width: 15px;
-  height: 15px;
+
 }
 .weight-table-icon-blue {
   margin-right: 5px;
-  width: 15px;
-  height: 15px;
+  cursor: pointer;
+
 }
 .weight-table-icon-value {
   color: #2b2d36;
@@ -127,11 +140,15 @@ h2 {
   font-weight: 400;
 
 }
-.weight-table-icon-active {
+.weight-table-icon-value-active {
   color: #fd6d6d;
   font-family: "Roboto Medium";
   font-size: 14px;
   font-weight: 500;
+}
+.weight__hidden {
+  width: 264px;
+  height: 16px;
 }
 
 .shop {
@@ -151,6 +168,10 @@ h2 {
 .oldprice {
   text-decoration: line-through;
   text-decoration-color: #fd6d6d;
+}
+.oldprice__hidden {
+  width: 264px;
+  height: 18px;
 }
 .oldprice__number {
   width: 28px;

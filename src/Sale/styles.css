@@ -2,12 +2,11 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 
 }
 .main__cards {
   display: flex;
-  flex-wrap: wrap;
   max-width: 650px;
   max-height: 810px;
 
@@ -79,7 +78,7 @@ h2 {
 }
 .Availability {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
 
 }
 .Availability__icon {

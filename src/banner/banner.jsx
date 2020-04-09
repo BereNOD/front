@@ -1,4 +1,8 @@
 import React from 'react';
+
+import kitten from './images/kitten.png';
+import grandorfPack from './images/grandorf-pack.png';
+
 import './banner.scss';
 
 class Banner extends React.Component {
@@ -6,10 +10,10 @@ class Banner extends React.Component {
     return (
       <div className="baner">
       <div className="container">
-        <img className="kitten_image" src="images/kitten.png"/>
+        <img className="kitten_image" src={kitten} />
         <div className="text">
-          <p className="title"> 
-            Здоровое питание для кошек	
+          <p className="title">
+            Здоровое питание для кошек
           </p>
           <p className="p">
             Все ли вы знаете о <br/> потребностях своей кошки?
@@ -21,8 +25,8 @@ class Banner extends React.Component {
           </form>
         </div>
         <div className="right_baner">
-          <div className="background_top_image">	
-            <img className="top_image" src="images/grandorf-pack.png"/>
+          <div className="background_top_image">
+            <img className="top_image" src={grandorfPack} />
           </div>
           <div className="bottom_image">
             <div className="top_text">
@@ -30,7 +34,7 @@ class Banner extends React.Component {
                 -20%
               </div>
               <div className="top_right_text">
-                на корм для <br/> кошек							
+                на корм для <br/> кошек
               </div>
             </div>
             <div className="bottom_text">
@@ -57,9 +61,9 @@ class Banner extends React.Component {
                 </button>
               </div>
             </div>
-          </div>				
+          </div>
         </div>
-      </div>	
+      </div>
     </div>
     )
   }

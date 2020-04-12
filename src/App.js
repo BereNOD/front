@@ -1,7 +1,8 @@
 import React from "react";
-import { hot } from 'react-hot-loader/root';
-import Ads from './ads/index.jsx';
-import Banner from './banner/banner.jsx';
+import { hot } from "react-hot-loader/root";
+import Ads from "./ads/index.jsx";
+import Banner from "./banner/banner.jsx";
+import Popularcard from "./popularcard/popularcard.jsx";
 
 class App extends React.Component {
   render() {
@@ -9,6 +10,7 @@ class App extends React.Component {
       <div>
         <Ads />
         <Banner />
+        <Popularcard />
       </div>
     );
   }

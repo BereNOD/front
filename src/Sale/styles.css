@@ -7,7 +7,7 @@ body {
 }
 .main__cards {
   display: flex;
-  flex-direction:column-reverse;
+  flex-direction: column;
   max-width: 650px;
   max-height: 810px;
 
@@ -150,9 +150,7 @@ h2 {
   height: 16px;
 }
 
-.shop {
-  position: relative;
-}
+
 .basket {
   position: absolute;
   right: 0;
@@ -160,9 +158,9 @@ h2 {
 
 }
 .shop {
+  position: relative;
   width: 264px;
-  margin: auto;
-  margin-top: 24px;
+  margin: 24px 20px 20px 20px;
 }
 .oldprice {
   text-decoration: line-through;
@@ -180,6 +178,7 @@ h2 {
   font-size: 16px;
   font-weight: 500;
 }
+
 .newprice__number {
   width: 31px;
   height: 21px;
@@ -195,6 +194,7 @@ h2 {
   font-family: "Stem - Bold";
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 27px;
 }
 .basket {
   width: 110px;

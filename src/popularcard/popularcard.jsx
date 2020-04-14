@@ -44,28 +44,28 @@ class Popularcard extends React.Component {
                 <div className="rating_block">
                   <input
                     name="rating"
-                    defaultValue={5}
+                    defaultValue="5"
                     id="rating_5"
                     type="radio"
                   />
                   <label htmlFor="rating_5" className="label_rating" />
                   <input
                     name="rating"
-                    defaultValue={4}
+                    defaultValue="4"
                     id="rating_4"
                     type="radio"
                   />
                   <label htmlFor="rating_4" className="label_rating" />
                   <input
                     name="rating"
-                    defaultValue={3}
+                    defaultValue="3"
                     id="rating_3"
                     type="radio"
                   />
                   <label htmlFor="rating_3" className="label_rating" />
                   <input
                     name="rating"
-                    defaultValue={2}
+                    defaultValue="2"
                     id="rating_2"
                     type="radio"
                     defaultChecked
@@ -73,7 +73,7 @@ class Popularcard extends React.Component {
                   <label htmlFor="rating_2" className="label_rating" />
                   <input
                     name="rating"
-                    defaultValue={1}
+                    defaultValue="1"
                     id="rating_1"
                     type="radio"
                   />

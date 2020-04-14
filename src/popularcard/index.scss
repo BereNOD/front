@@ -4,14 +4,17 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  
+  
   .card_wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     .card {
       width: 100%;
+      max-width: 305px;
       height: 100%;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
       .card_header {
@@ -23,7 +26,7 @@
         .card_discount {
           position: absolute;
           left: 15%;
-          .button {
+          .card_discount_button {
             min-width: 50px;
             background-color: red;
             color: white;
@@ -62,9 +65,18 @@
       }
       .card_checkbox {
         display: flex;
+        .checkbox_block{
+          
+        }
+        .checkbox_text{
+          color: #343640;
+        }
+        
       }
       .card_text {
-        padding: 5px 10px;
+        padding: 20px;
+        color: #343640;
+
       }
       .card_weight {
         width: 100%;
@@ -73,6 +85,7 @@
         align-content: center;
         justify-items: center;
         margin: 10px 0;
+        
       }
 
       .weight_label {

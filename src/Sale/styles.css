@@ -2,24 +2,15 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-
+}
+h2 {
+  margin-bottom: 39px;
 }
 .main__cards {
   display: flex;
   flex-direction: column;
   max-width: 650px;
   max-height: 810px;
-
-
-}
-.sale {
-
-
-
-}
-h2 {
-  margin-bottom: 39px;
 }
 .sale__card {
   width: 304px;
@@ -29,7 +20,6 @@ h2 {
   background-color: #FFF;
   margin-right: 26px;
   margin-bottom: 26px;
-
 }
 .sale__img {
   display: flex;
@@ -37,7 +27,6 @@ h2 {
   width: 264px;
   height: 130px;
   margin: 20px;
-
 }
 .title__img {
   width: 130px;
@@ -54,7 +43,6 @@ h2 {
   border-radius: 5px;
   text-align: center;
   margin: 0;
-
 }
 .rating {
   width: 264px;
@@ -66,7 +54,6 @@ h2 {
   justify-content: space-around;
   width: 264px;
   height: 16px;
-
 }
 .rating__stars {
   display: flex;
@@ -79,11 +66,9 @@ h2 {
 .Availability {
   display: flex;
   justify-content: flex-end;
-
 }
 .Availability__icon {
   display: block;
-
 }
 .Availability__index {
   font-family: Roboto;
@@ -94,8 +79,6 @@ h2 {
   color: #343640;
   margin-left: 3px;
 }
-
-
 .description {
   width: 264px;
   height: 58px;
@@ -113,31 +96,24 @@ h2 {
   padding: 0;
   margin: 17px 20px;
 }
-
-
 .weight-table {
   display: flex;
   justify-content: space-around;
-
 }
-
 .weight-table-icon {
   display: block;
   margin-right: 5px;
   cursor: pointer;
-
 }
 .weight-table-icon-blue {
   margin-right: 5px;
   cursor: pointer;
-
 }
 .weight-table-icon-value {
   color: #2b2d36;
   font-family: Roboto;
   font-size: 13px;
   font-weight: 400;
-
 }
 .weight-table-icon-value-active {
   color: #fd6d6d;

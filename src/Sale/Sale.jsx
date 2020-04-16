@@ -15,6 +15,8 @@ import starFull from './images/star-full.png';
 
 import './styles.css';
 
+
+
 class Sale extends React.Component {
   render() {
     return (

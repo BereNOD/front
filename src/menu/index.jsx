@@ -6,7 +6,7 @@ import MenuImage3 from './imageMenu/fish-icon.png';
 import MenuImage4 from './imageMenu/chicken-icon.png';
 import MenuImage5 from './imageMenu/pig-icon.png';
 
-import './styles.scss';
+import "./styles.scss";
 
 class Menu extends React.Component {
     render() {

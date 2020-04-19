@@ -17,10 +17,12 @@
       max-width: 305px;
      margin: 20px;
       height: 100%;
+      min-height: 382px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
       .card_header {
         display: flex;
-        padding: 10px;
+        padding: 20px 20px 15px 20px;
         justify-content: center;
         position: relative;
         height: 150px;
@@ -29,7 +31,7 @@
           left: 15%;
           .card_discount_button {
             min-width: 50px;
-            background-color: red;
+            background-color: #FD6D6D;
             color: white;
             padding: 5px;
             border-radius: 5px;
@@ -42,7 +44,7 @@
         }
       }
       .card_checkboxes {
-        padding: 10px 0;
+        padding: 20px;
         width: 100%;
         height: 15px;
         display: flex;
@@ -50,6 +52,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         .card_stars {
+        
           .rating_block input[type="radio"] {
             display: none;
           }
@@ -61,6 +64,7 @@
             background: no-repeat 50% 0 url("./star-empty.png");
             cursor: pointer;
             margin-right: 2px;
+            
           }
         }
       }
@@ -85,7 +89,7 @@
         grid-template-columns: repeat(4, 1fr);
         align-content: center;
         justify-items: center;
-        margin: 10px 0;
+        padding: 10px;
         
       }
 
@@ -129,7 +133,7 @@
         letter-spacing: 0;
       }
       .order_menu {
-        padding: 0 10px 10px;
+        padding: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;

@@ -5,15 +5,14 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
-<<<<<<< HEAD
+
   entry: [
     'react-hot-loader/patch',
     './src/index.js'
   ],
-=======
+
   devtool: 'eval-source-map',
   entry: ["react-hot-loader/patch", "./src/index.js"],
->>>>>>> master
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js'

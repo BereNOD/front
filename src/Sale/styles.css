@@ -205,3 +205,11 @@ h2 {
   border-width: 0;
   cursor: pointer;
 }
+.main {
+  color: black;
+  
+}
+.mainPost {
+  border: 1px solid black;
+
+}

@@ -25,10 +25,10 @@ class App extends React.Component {
         <p>{post.body}</p>
         </div>
       ))}
-          // <Ads />
-          // <Banner />
-          // <Sale />
-           // <New />
+           <Ads />
+           <Banner />
+           <Sale />
+            <New />
       </div>
     );
   }

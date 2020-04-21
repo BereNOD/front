@@ -1,21 +1,62 @@
 import React from "react";
 import { hot } from "react-hot-loader/root";
-import Ads from "./ads/index.jsx";
-import Banner from "./banner/banner.jsx";
-import Popularcard from "./popularcard/popularcard.jsx";
+import _ from 'lodash';
+// import Ads from "./ads/index.jsx";
+// import Banner from "./banner/banner.jsx";
+// import Popularcard from "./popularcard/popularcard.jsx";
 
-const popcard = [1, 2, 3, 4, 5, 6, 7, 8];
 
-class App extends React.Component {
+class Oksana extends React.Component {
+  state = {
+    posts: []
+  };
+
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(posts => this.setState({ posts: posts }));
+  }
+
+  handleMessage = (e) => {
+    this.setState({ message: e.target.value });
+  };
+
   render() {
     return (
-      <div>
-        <Ads />
-        <Banner />
-        <Popularcard />
-      </div>
+      < div >
+        <input type='text' value={this.state.message}
+          onChange={this.handleMessage} />
+        {_.size(this.state.message) === 0 ? (
+          <span>Field  must be filled</span>
+        ) : null}
+        {_.map(this.state.posts, post => (
+          <div>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+          </div>
+        ))}
+
+      </div >
     );
   }
 }
 
-export default hot(App);
+export default hot(Oksana);
+
+
+
+// class App extends React.Component {
+
+//   render() {
+//     return (
+//       <div>
+//         <Ads />
+//         <Banner />
+//         <Popularcard />
+//         {/* <Oksana /> */}
+//       </div>
+//     );
+//   }
+// }
+
+// export default hot(App);

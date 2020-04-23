@@ -7,6 +7,10 @@ body {
 h2 {
   margin-bottom: 39px;
 }
+.sale {
+  display: block;
+  float: right;
+}
 
 .main__cards {
   display: flex;
@@ -207,7 +211,7 @@ h2 {
 }
 .main {
   color: black;
-  
+
 }
 .mainPost {
   border: 1px solid black;

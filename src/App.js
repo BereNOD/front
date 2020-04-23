@@ -1,16 +1,17 @@
 import React from "react";
 import { hot } from 'react-hot-loader/root';
 import _ from 'lodash'
-// import Ads from './ads/index.jsx';
-// import Banner from './banner/banner.jsx';
+import Ads from './ads/index.jsx';
+import Banner from './banner/banner.jsx';
 import Sale from './Sale/Sale.jsx'
-// import New from './new/new.jsx';
+import New from './new/new.jsx';
 
 
 class App extends React.Component {
   state = {
     posts: []
   };
+
  componentDidMount() {
    fetch('https://jsonplaceholder.typicode.com/posts')
    .then(response => response.json())
@@ -28,10 +29,10 @@ class App extends React.Component {
           </div>
         ))}
 
-           // <Ads />
-           // <Banner />
+           <Ads />
+           <Banner />
            <Sale />
-           //  <New />
+           <New />
       </div>
     );
   }

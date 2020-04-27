@@ -5,6 +5,18 @@ import Ads from './ads/index.jsx';
 import Banner from './banner/banner.jsx';
 import Sale from './Sale/Sale.jsx'
 import New from './new/new.jsx';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+import Home from './pages/home';
+import About from './pages/about';
+import Users from './pages/users';
+import Button from './pages/button';
 
 
 class App extends React.Component {

@@ -55,17 +55,14 @@ h2 {
   margin: 0;
 }
 
-.rating {
-  width: 264px;
-  height: 16px;
-  margin: 20px;
-}
+
 
 .rating__block {
   display: flex;
   justify-content: space-around;
   width: 264px;
   height: 16px;
+  margin: 20px;
 }
 
 .rating__stars {
@@ -76,6 +73,11 @@ h2 {
   list-style-type: none;
   cursor: pointer;
 }
+.rating__index {
+  display: block;
+  cursor: pointer;
+}
+
 
 .Availability {
   display: flex;
@@ -156,49 +158,35 @@ h2 {
   bottom: 0;
 }
 
-.shop {
+.price {
   position: relative;
   width: 264px;
   margin: 24px 20px 20px;
 }
 
 .oldprice {
-  text-decoration: line-through;
-  text-decoration-color: #fd6d6d;
-}
-
-.oldprice__hidden {
-  width: 264px;
-  height: 18px;
-}
-
-.oldprice__number {
-  width: 28px;
-  height: 19px;
   color: #dfdfdf;
   font-family: "Stem - Medium";
   font-size: 16px;
   font-weight: 500;
+  text-decoration: line-through;
+  text-decoration-color: #fd6d6d;
+}
+.oldprice__number {
+  margin-left: 6px;
 }
 
-.newprice__number {
-  width: 31px;
-  height: 21px;
+.newprice {
   color: #fd6d6d;
   font-family: "Stem - Bold";
   font-size: 18px;
   font-weight: 700;
 }
-
-.newprice__number1 {
-  width: 31px;
-  height: 21px;
-  color: #343640;
-  font-family: "Stem - Bold";
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 27px;
+.newprice__number {
+  margin-left: 11px;
 }
+
+
 
 .basket {
   width: 110px;

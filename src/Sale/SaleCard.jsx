@@ -63,7 +63,7 @@ class SaleCard extends React.Component {
               </li>
               <li className="weight-table">
                 <img className="weight-table-icon-blue" src={printIconBlue} />
-                <div className="weight-table-icon-value-active">5 кг</div>
+                <div className="weight-table-icon-value">5 кг</div>
               </li>
             </ul>
             <div className="price">

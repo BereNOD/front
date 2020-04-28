@@ -15,6 +15,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
+// import New from './pages/new';
 
 class App extends React.Component {
   state = {
@@ -50,12 +51,18 @@ class App extends React.Component {
               <li>
                 <Link to="/button">Button</Link>
               </li>
+              <li>
+                <Link to="/new">New</Link>
+              </li>
             </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/new">
+              <New />
+            </Route>
             <Route path="/button">
               <Button />
             </Route>

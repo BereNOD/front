@@ -23,8 +23,7 @@ const response = {
     },
     {
       rating: 0,
-      price: 229,
-      salePrice: 0
+      price: 229
     }
   ],
 };

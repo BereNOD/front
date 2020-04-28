@@ -27,6 +27,7 @@ class SaleCard extends React.Component {
             <div className="value">{toSalePercent(this.props.price, this.props.salePrice)}</div>
             ) : null}
               <img className="title__img" src={placeForPhoto} />
+
         </div>
           <div className="rating__block">
             <ul className="rating__stars">

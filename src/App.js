@@ -2,7 +2,7 @@ import React from "react";
 import { hot } from 'react-hot-loader/root';
 import Ads from './ads/index.jsx';
 import Banner from './banner/banner.jsx';
-import New from './new/new.jsx';
+// import New from './new/new.jsx';
 import {
   BrowserRouter,
   Switch,
@@ -15,7 +15,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
-// import New from './pages/new';
+import New from './pages/new';
 
 class App extends React.Component {
   state = {
@@ -23,6 +23,9 @@ class App extends React.Component {
   };
 
   componentDidMount = async () => {
+    /**
+     * Вопрос о async/await и о том, в чём смысл их использования относительно в промисам.
+     */
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/posts');
       const posts = await response.json();

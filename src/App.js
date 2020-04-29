@@ -16,6 +16,7 @@ import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
 import New from './pages/new';
+import SearchBar from './components/searchBar';
 
 class App extends React.Component {
   state = {
@@ -39,6 +40,10 @@ class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
+        <div className="container">
+          <div className="row MyAwesomeComponent">
+          </div>
+        </div>
         <div>
           <nav>
             <ul>
@@ -57,12 +62,39 @@ class App extends React.Component {
               <li>
                 <Link to="/new">New</Link>
               </li>
+              <li>
+                <Link to="/search-bar">Search bar</Link>
+              </li>
             </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/search-bar">
+              <div
+                style={{
+                  width: '100%',
+                  height: '300px',
+                  backgroundColor: 'purple',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                <SearchBar
+                  action="/search"
+                  onLoaded={(error, posts) => {
+                    if (error) {
+                      console.error(error);
+                      return;
+                    }
+
+                    this.setState({ posts });
+                  }}
+                />
+              </div>
+            </Route>
             <Route path="/new">
               <New />
             </Route>
@@ -79,6 +111,108 @@ class App extends React.Component {
               <Home />
             </Route>
           </Switch>
+          <div className="exampleParent">
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+            <div className="exampleChild"></div>
+          </div>
         </div>
       </BrowserRouter>
     );

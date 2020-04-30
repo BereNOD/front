@@ -65,6 +65,9 @@ class App extends React.Component {
               <li>
                 <Link to="/search-bar">Search bar</Link>
               </li>
+              <li>
+                <Link to="/banner">Banner</Link>
+              </li>
             </ul>
           </nav>
 
@@ -109,6 +112,9 @@ class App extends React.Component {
             </Route>
             <Route path="/">
               <Home />
+            </Route>
+            <Route path="/banner">
+              <Banner />
             </Route>
           </Switch>
           <div className="exampleParent">

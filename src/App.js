@@ -74,6 +74,9 @@ class App extends React.Component {
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/banner">
+              <Banner />
+            </Route>
             <Route path="/search-bar">
               <div
                 style={{
@@ -112,9 +115,6 @@ class App extends React.Component {
             </Route>
             <Route path="/">
               <Home />
-            </Route>
-            <Route path="/banner">
-              <Banner />
             </Route>
           </Switch>
           <div className="exampleParent">

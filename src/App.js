@@ -91,6 +91,9 @@ import SearchBar from './components/searchBar';
                 />
               </div>
             </Route>
+            <Route path="/sale">
+              <Sale />
+            </Route>
             <Route path="/new">
               <New />
             </Route>

@@ -5,6 +5,7 @@ const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
+  devtool: 'eval-source-map',
   entry: ["react-hot-loader/patch", "./src/index.js"],
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -47,7 +48,7 @@ const config = {
         include: /\.module\.css$/,
       },
       {
-        test: /\.scss$/,
+        test: /\.s(c|a)ss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
@@ -89,12 +90,13 @@ const config = {
   ],
   devServer: {
     contentBase: "./dist",
+    watchOptions: { aggregateTimeout: 300, poll: 1000 },
     headers: {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Credentials": "true",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization, x-id, Content-Length, X-Requested-With",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
-    }
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    },
+    historyApiFallback: true
   },
   optimization: {
     runtimeChunk: "single",

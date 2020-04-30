@@ -21,10 +21,10 @@ const response = {
       price: 99998,
       salePrice: 6000
     },
-    {
-      rating: 3,
-      price: 99997
-    },
+    // {
+    //   rating: 3,
+    //   price: 99997
+    // },
     {
       rating: 4,
       price: 99996,

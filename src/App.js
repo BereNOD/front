@@ -17,6 +17,7 @@ import Users from './pages/users';
 import Button from './pages/button';
 import New from './pages/new';
 import SearchBar from './components/searchBar';
+import Menu from './menu/index';
 
 class App extends React.Component {
   state = {
@@ -49,6 +50,9 @@ class App extends React.Component {
             <ul>
               <li>
                 <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/menu">Menu</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>
@@ -94,6 +98,9 @@ class App extends React.Component {
                   }}
                 />
               </div>
+            </Route>
+            <Route path="/menu">
+              <Menu />
             </Route>
             <Route path="/new">
               <New />

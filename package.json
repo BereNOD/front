@@ -11,7 +11,8 @@
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production",
     "start": "webpack-dev-server --hot --mode development",
-    "server": "node ./server/bin/www"
+    "server": "node ./server/bin/www",
+    "preinstall": "npm i"
   },
   "dependencies": {
     "react": "^16.13.1",

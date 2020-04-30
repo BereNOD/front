@@ -17,7 +17,6 @@ import Home from './pages/home';
 import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
-import Sale from '.pages/sale'
 
 
 class App extends React.Component {

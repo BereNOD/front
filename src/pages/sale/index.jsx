@@ -4,7 +4,9 @@ import Sale from '../Sale/Sale.jsx';
 class Sale extends Component {
   render() {
     return (
-      <main>Sale</main>
+      <main>
+      <Sale />
+      </main>
     );
   }
 }

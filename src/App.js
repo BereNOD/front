@@ -17,6 +17,7 @@ import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
 import New from './pages/new';
+import Sale from './pages/sale';
 import SearchBar from './components/searchBar';
 
 
@@ -53,6 +54,9 @@ import SearchBar from './components/searchBar';
               </li>
               <li>
                 <Link to="/new">New</Link>
+              </li>
+              <li>
+                <Link to="/sale">Sale</Link>
               </li>
               <li>
                 <Link to="/search-bar">Search bar</Link>

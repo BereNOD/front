@@ -10,6 +10,19 @@
   font-weight: 400;
 }
 
+* {
+  &, &:befor, &:after {
+    transition-property: none;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+
+    &:hover {
+      transition-timing-function: ease-in;
+    }
+  }
+}
+
 main {
   color: black;
 }

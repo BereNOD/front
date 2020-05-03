@@ -2,21 +2,30 @@ import React from 'react';
 
 import phone_icon from "./img/phone_icon.png";
 import location_icon from "./img/location_icon.png";
+import './contacts.sass'
 import '../header.scss';
 
 class contacts extends React.Component {
   render() {
     return (
       <div className="Contacts">
-        <div className="Telnumber">
-        <img src={phone_icon}/>
-        <a link="white" hover='#68D6F4' href="#"><b> +7(930) 635-65-25</b></a>
-      </div>
 
-      <div className="location_icon">
-        <img src={location_icon}/>
-        <a link="white" hover='#68D6F4' href="#"><b> г.Тула,ул.Пузакова, 44</b></a>
-      </div>
+        <a className="Contact_number" link="white" hover='#68D6F4' href="#">
+            <img height="17" width="17" src={phone_icon}/>
+            <span className="Contact_data">+7(930) 635-65-25
+          </span>
+        </a>
+
+
+
+
+
+        <a className="Contact_geo" link="white" hover='#68D6F4' href="#">
+           <img height="18" width="15" src={location_icon}/>
+           <span className="Contact_data">г.Тула,ул.Пузакова, 44
+         </span>
+       </a>
+
     </div>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import user_icon from "./kenguru/user_icon.png";
-import './header.scss';
+import user_icon from "./user_icon.png";
+import '../header.scss';
 
 class header extends React.Component {
   render() {

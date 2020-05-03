@@ -3,3 +3,13 @@
 @import "./new/styles.scss";
 @import "./header/header.scss";
 // @import "./banner/banner.scss";
+
+:root {
+  font-family: Roboto, sans-serif;
+  font-style: 15px;
+  font-weight: 400;
+}
+
+main {
+  color: black;
+}

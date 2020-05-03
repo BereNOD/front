@@ -1,8 +1,8 @@
-React from 'react';
+import React from 'react';
 
 import phone_icon from "./img/phone_icon.png";
 import location_icon from "./img/location_icon.png";
-import './header.scss';
+import '../header.scss';
 
 class contacts extends React.Component {
   render() {

@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from "./logo.png";
+import logo_img from "./logo.png";
 import '../header.scss';
 
 class logo extends React.Component {
   render() {
     return (
-      <div className="Header">
-      <div className="Top_header">
+
         <div className="Logo_Wrapper">
-          <img src={logo}/>
+          <img src={logo_img}/>
         </div>
       )
     }

@@ -8,16 +8,17 @@ h2 {
   margin-bottom: 39px;
 }
 .sale {
-  display: block;
-  float: right;
+  width: 50%;
+
+
 }
 
 .main__cards {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 650px;
-  max-height: 800px;
+
+
+
 }
 
 .sale__card {
@@ -32,18 +33,21 @@ h2 {
 
 .sale__img {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 264px;
   height: 130px;
   margin: 20px;
 }
 
 .title__img {
+  display: flex;
+  justify-content: center;
   width: 130px;
   height: 130px;
 }
 
 .value {
+
   width: 50px;
   height: 25px;
   border-radius: 5px;
@@ -60,7 +64,7 @@ h2 {
 
 .rating__block {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 264px;
   height: 16px;
   margin: 20px;
@@ -99,6 +103,7 @@ h2 {
   margin-left: 3px;
 }
 
+
 .description {
   width: 264px;
   height: 58px;
@@ -111,7 +116,7 @@ h2 {
 
 .weight {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 264px;
   list-style-type: none;
   padding: 0;
@@ -125,6 +130,8 @@ h2 {
 
 .weight-table-icon {
   display: block;
+  width: 15px;
+  height: 15px;
   margin-right: 5px;
   cursor: pointer;
 }
@@ -141,8 +148,7 @@ h2 {
   font-weight: 400;
 }
 
-.weight-table-icon-value:hover,
-.weight-table-icon-value-active {
+.weight-table-icon-value:hover {
   color: #fd6d6d;
   font-family: "Roboto Medium";
   font-size: 14px;
@@ -151,9 +157,7 @@ h2 {
 
 
 
-.basket {
 
-}
 
 .price {
   position: relative;
@@ -183,7 +187,9 @@ h2 {
   margin-left: 11px;
 }
 
+.noChangePrice {
 
+}
 
 .basket {
   position: absolute;
@@ -196,6 +202,8 @@ h2 {
   color: white;
   border-width: 0;
   cursor: pointer;
+  font-size: 14px;
+
 }
 .main {
   color: black;

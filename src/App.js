@@ -20,6 +20,11 @@ import New from './pages/new';
 import Sale from './pages/sale';
 import SearchBar from './components/searchBar';
 
+class App extends React.Component {
+  state = {
+    posts: []
+  }
+
 
   componentDidMount = async () => {
     /**
@@ -28,7 +33,10 @@ import SearchBar from './components/searchBar';
     try {
       const response = await fetch('https://jsonplaceholder.typicode.com/posts');
       const posts = await response.json();
-
+    } catch (error) {
+      console.warn(error);
+    }
+}
 
   render() {
     return (
@@ -114,6 +122,7 @@ import SearchBar from './components/searchBar';
       </BrowserRouter>
     );
   }
+
 }
 
 export default hot(App);

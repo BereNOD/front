@@ -40,11 +40,21 @@ class SaleCard extends React.Component {
               </li>
             ))}
             </ul>
-            <div className="Availability">
-              <img src={checkIcon} alt="Availability__icon" />
-              <div className="Availability__index">в наличии</div>
+            {
+              this.props.availability ? (
+                <div className="Availability">
+                  <img src={checkIcon} alt="Availability__icon" />
+                  <div className="Availability__index">в наличии</div>
+                </div>
+
+              ) : (
+                <div className="Availability">
+                  <img src={checkIcon} alt="Availability__icon" />
+                  <div className="Availability__index">на складе</div>
+                </div>
+              )
+            }
             </div>
-          </div>
         <div className="description">
           Сухой корм Acana Lamb & Okanagan Apple для взрослых собак, с ягнёнком и яблоком
         </div>
@@ -62,7 +72,7 @@ class SaleCard extends React.Component {
                 <div className="weight-table-icon-value">2 кг</div>
               </li>
               <li className="weight-table">
-                <img className="weight-table-icon-blue" src={printIconBlue} />
+                <img className="weight-table-icon" src={printIconEmpty} />
                 <div className="weight-table-icon-value">5 кг</div>
               </li>
             </ul>
@@ -81,6 +91,13 @@ class SaleCard extends React.Component {
                     <img className="newprice__logo" src={roubleSign1} />
                 </span>
             </div>
+            {this.props.noChangePrice ? (
+              <div className="noChangePrice">
+                <span className="noChangePrice__number">
+                  <img className="noChangePrice__logo" src={roubleSign3} />
+                </span>
+              </div>
+            ) : null}
               <button className="basket">В корзину</button>
             </div>
       </div>

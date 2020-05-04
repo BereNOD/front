@@ -7,11 +7,13 @@ import _ from 'lodash';
 const response = {
   data: [
     {
+      availability: 1,
       rating: 5,
       price: 295,
       salePrice: 237
     },
     {
+      availability: 1,
       rating: 1,
       price: 350,
       salePrice: 209
@@ -23,8 +25,8 @@ const response = {
     },
     {
       rating: 0,
-      price: 229,
-      
+      noChangePrice: 229
+
     }
   ],
 };
@@ -39,7 +41,9 @@ class Sale extends React.Component {
                     <SaleCard
                       price={item.price}
                       salePrice={item.salePrice}
+                      noChangePrice={item.noChangePrice}
                       rating={item.rating}
+                      availability={item.availability}
                     />
                   ))}
                 </div>

@@ -14,10 +14,11 @@ class SearchBar extends React.Component {
              className="SearchBar_input"
        />
 
-      <button className="SearchBar_button">
-      <SearchIcon></SearchIcon>
-      <span className="SearchBar_buttonTitle">Найти</span>
-      </button>
+           <button className="SearchBar_button">
+                <SearchIcon></SearchIcon>
+                <span className="SearchBar_buttonTitle">Найти
+             </span>
+          </button>
       </form>
     )
   }

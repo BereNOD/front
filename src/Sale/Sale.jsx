@@ -25,7 +25,8 @@ const response = {
     },
     {
       rating: 0,
-      noChangePrice: 229
+      price: 99,
+      salePrice: 58
 
     }
   ],
@@ -41,7 +42,6 @@ class Sale extends React.Component {
                     <SaleCard
                       price={item.price}
                       salePrice={item.salePrice}
-                      noChangePrice={item.noChangePrice}
                       rating={item.rating}
                       availability={item.availability}
                     />

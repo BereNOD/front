@@ -56,7 +56,7 @@ class SaleCard extends React.Component {
             }
             </div>
         <div className="description">
-          Сухой корм Acana Lamb & Okanagan Apple для взрослых собак, с ягнёнком и яблоком
+          <a className="description__link" href="#">Сухой корм Acana Lamb & Okanagan Apple для взрослых собак, с ягнёнком и яблоком</a>
         </div>
         <ul className="weight">
               <li className="weight-table">
@@ -91,13 +91,7 @@ class SaleCard extends React.Component {
                     <img className="newprice__logo" src={roubleSign1} />
                 </span>
             </div>
-            {this.props.noChangePrice ? (
-              <div className="noChangePrice">
-                <span className="noChangePrice__number">
-                  <img className="noChangePrice__logo" src={roubleSign3} />
-                </span>
-              </div>
-            ) : null}
+
               <button className="basket">В корзину</button>
             </div>
       </div>

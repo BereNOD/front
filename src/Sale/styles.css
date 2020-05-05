@@ -11,6 +11,7 @@ h2 {
   width: 50%;
 
 
+
 }
 
 .main__cards {
@@ -33,15 +34,14 @@ h2 {
 
 .sale__img {
   display: flex;
-  justify-content: flex-start;
-  width: 264px;
+  justify-content: centre;
+  width: 265px;
   height: 130px;
   margin: 20px;
 }
 
 .title__img {
-  display: flex;
-  justify-content: center;
+
   width: 130px;
   height: 130px;
 }
@@ -57,10 +57,8 @@ h2 {
   line-height: 25px;
   border-radius: 5px;
   text-align: center;
-  margin: 0;
+  margin-right: 20px;
 }
-
-
 
 .rating__block {
   display: flex;
@@ -78,11 +76,11 @@ h2 {
   list-style-type: none;
   cursor: pointer;
 }
+
 .rating__index {
   display: block;
   cursor: pointer;
 }
-
 
 .Availability {
   display: flex;
@@ -103,7 +101,6 @@ h2 {
   margin-left: 3px;
 }
 
-
 .description {
   width: 264px;
   height: 58px;
@@ -113,6 +110,15 @@ h2 {
   font-weight: 400;
   margin: 21px 20px 17px;
 }
+.description__link,
+.description__link:active,
+.description__link:hover,
+.description__link:visited
+ {
+  color: #2B2D36;
+  text-decoration: none;
+}
+
 
 .weight {
   display: flex;
@@ -136,11 +142,6 @@ h2 {
   cursor: pointer;
 }
 
-.weight-table-icon-blue {
-  margin-right: 5px;
-  cursor: pointer;
-}
-
 .weight-table-icon-value {
   color: #2b2d36;
   font-family: Roboto;
@@ -154,10 +155,6 @@ h2 {
   font-size: 14px;
   font-weight: 500;
 }
-
-
-
-
 
 .price {
   position: relative;
@@ -187,10 +184,6 @@ h2 {
   margin-left: 11px;
 }
 
-.noChangePrice {
-
-}
-
 .basket {
   position: absolute;
   right: 0;
@@ -203,13 +196,7 @@ h2 {
   border-width: 0;
   cursor: pointer;
   font-size: 14px;
-
 }
-.main {
-  color: black;
-
-}
-.mainPost {
-  border: 1px solid black;
-
+.basket:hover {
+  background-color: #572F8C;
 }

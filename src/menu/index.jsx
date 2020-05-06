@@ -12,32 +12,41 @@ class Menu extends React.Component {
     render() {
       return (
         <section className="sectionMenu">
-                    <div className="menu">
-                        <div className="categoryAnimal firstLeftAnimal" title="Кошки">
-                            <img src={MenuImage} alt="" className="imageIcon" width="33px" height="35px" />
-                            <span className="imageText">Кошки</span>
-                        </div>
-                        <div className="categoryAnimal" title="Собаки">
-                            <img src={MenuImage1} alt="" className="imageIcon" width="38px" height="35px" />
-                            <span className="imageText">Собаки</span>
-                        </div>
-                        <div className="categoryAnimal" title="Грызуны">
-                            <img src={MenuImage2} alt="" className="imageIcon" width="33px" height="35px" />
-                            <span className="imageText">Грызуны</span>
-                        </div>
-                        <div className="categoryAnimal" title="Рыбы">
-                            <img src={MenuImage3} alt="" className="imageIcon" width="33px" height="35px" />
-                            <span className="imageText">Рыбы</span>
-                        </div>
-                        <div className="categoryAnimal" title="Птицы">
-                            <img src={MenuImage4} alt="" className="imageIcon" width="33px" height="35px" />
-                            <span className="imageText">Птицы</span>
-                        </div>
-                        <div className="categoryAnimal" title="Сельхоз Животные">
-                            <img src={MenuImage5} alt="" className="imageIcon" width="33px" height="35px" />
-                            <span className="imageText">Сельхоз Животные</span> 
-                        </div>
-                    </div>
+                    <nav className="menu">
+                        <ul className="categoryBar">
+                          <li className="categoryName"><a href="#" className="categoryLink"><img src={MenuImage}></img><span>Тварь</span></a>
+                            <ul className="submenu">
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                            </ul></li>
+                          <li className="categoryName"><a href="#" className="categoryLink"><img src={MenuImage}></img><span>Тварь</span></a>
+                          <ul className="submenu">
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                            </ul></li>
+                          <li className="categoryName"><a href="#" className="categoryLink"><img src={MenuImage}></img><span>Тварь</span></a></li>
+                          <li className="categoryName"><a href="#" className="categoryLink"><img src={MenuImage}></img><span>Тварь</span></a>
+                          </li>
+                          <li className="categoryName"><a href="#" className="categoryLink"><img src={MenuImage}></img><span>Тварь</span></a></li>
+                          <li className="categoryName"><a href="#" className="categoryLink"><img src={MenuImage}></img><span>Тварь</span></a>
+                          <ul className="submenu">
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                                <li className="submenuList"><a href="#" className="submenuLink">Раздел</a></li>
+                            </ul></li>
+                        </ul>
+                    </nav>
         </section>
       )
     }

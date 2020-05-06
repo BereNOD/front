@@ -1,10 +1,10 @@
-import 'bootstrap/scss/bootstrap.scss';
+// import 'bootstrap/scss/bootstrap.scss';
 
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import "./styles.scss";
-import "./styles.less";
+// import "./styles.scss";
+// import "./styles.less";
 
 ReactDOM.render(
   <App name="Jane" />,

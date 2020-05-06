@@ -18,7 +18,7 @@ class Menu extends React.Component {
                             <span className="imageText">Кошки</span>
                         </div>
                         <div className="categoryAnimal" title="Собаки">
-                            <img src={MenuImage1} alt="" className="imageIcon" width="33px" height="35px" />
+                            <img src={MenuImage1} alt="" className="imageIcon" width="38px" height="35px" />
                             <span className="imageText">Собаки</span>
                         </div>
                         <div className="categoryAnimal" title="Грызуны">

@@ -18,9 +18,41 @@ import Button from './pages/button';
 import New from './pages/new';
 import SearchBar from './components/searchBar';
 
+const load = () => new Promise((resolve, reject) => {
+  setTimeout(reject, 1000, 'error');
+});
+
+class Loader extends React.Component {
+  state = {
+    data: null,
+    error: null
+  };
+
+  componentDidMount = async () => {
+    try {
+      const data = await load();
+
+      this.setState({ data });
+    } catch (error) {
+      this.setState({ error });
+    }
+  }
+
+  render = () => {
+    if (this.state.error) {
+      throw this.state.error;
+    }
+    if (this.state.data) {
+      return this.state.data;
+    }
+    return 'Данные скачиваются...';
+  }
+}
+
 class App extends React.Component {
   state = {
-    posts: []
+    posts: [],
+    error: null
   };
 
   componentDidMount = async () => {
@@ -37,6 +69,11 @@ class App extends React.Component {
     }
   };
 
+  componentDidCatch(error, info) {
+    console.log(error, info);
+    this.setState({ error });
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -46,6 +83,13 @@ class App extends React.Component {
         </div>
         <div>
           <nav>
+            <span
+              style={{
+                color: 'black'
+              }}
+            >
+              {this.state.error ? 'Произошла ошибка.' : <Loader />}
+            </span>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -84,9 +128,10 @@ class App extends React.Component {
               >
                 <SearchBar
                   action="/search"
+                  method="OPTIONS"
                   onLoaded={(error, posts) => {
                     if (error) {
-                      console.error(error);
+                      this.setState({ error });
                       return;
                     }
 

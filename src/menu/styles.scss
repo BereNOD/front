@@ -1,13 +1,16 @@
 .sectionMenu {
+    position: relative; 
     font-family: Roboto, sans-serif;
     display: flex;
     justify-content: center;
     text-align: center;
     background-image: url('./imageMenu/pattern1.png');
-    position: relative;
+    &:hover {
+        background-image: url('./imageMenu/pattern2.png');
+    } 
     .menu{
         width: 100%;
-        max-width: 1320px;      
+        max-width: 1320px;    
         .categoryBar {
             display: flex;
             .categoryName {
@@ -27,11 +30,12 @@
                     text-transform: uppercase;
                     color: #ffffff;
                     img {
-                        padding-right: 20px;
+                        margin-right: 10px;
+                        margin-left: 10px;
                     }  
                 }
                 &:hover {
-                    background-color: red;
+                    background-image: url('./imageMenu/pattern1.png');
                     .submenu {
                         transform: translateY(0) scaleY(1);
                         transition: transform .3s .3s ease;
@@ -54,6 +58,7 @@
         transition: transform .3s  ease;
     } 
     .submenuList {
+        margin: auto;
         display: block;
         height: 50px;
         line-height: 50px;
@@ -61,5 +66,10 @@
     }
     .submenuLink {
         text-decoration: none;
+        color:#572F8C;
+        &:hover {
+            border-bottom: 3px solid #572F8C;
+            transition: border-bottom 1s;
+        }
     }
 }

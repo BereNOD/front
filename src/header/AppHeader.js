@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader/root';
 import Logo from './logoProject/logoProject.jsx';
 import Contacts from './contacts/contacts.jsx';
 import SearchBar from './searchBar/indexSearchBar.jsx';
-import Profile from './profile/profile.jsx';
+import Profile from './profile/AppModal.jsx';
 import CartMarket from './cartMarket/cartMarket.jsx';
 import './header.scss';
 

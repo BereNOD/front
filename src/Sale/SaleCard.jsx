@@ -1,13 +1,12 @@
 import React from 'react';
 import toSalePercent from '../utils/toSalePercent.js';
+import Weights from './weights';
 
 import checkIcon from './images/check-icon.png';
 import placeForPhoto from './images/place_for_photo.png';
 import placeForPhoto1 from './images/place_for_photo_1.png';
 import placeForPhoto2 from './images/place_for_photo_2.png';
 import placeForPhoto3 from './images/place_for_photo_3.png';
-import printIconBlue from './images/print-icon-blue.png';
-import printIconEmpty from './images/print-icon-empty.png';
 import roubleSign1 from './images/rouble-sign_1.png';
 import roubleSign2 from './images/rouble-sign_2.png';
 import roubleSign3 from './images/rouble-sign_3.png';
@@ -18,7 +17,20 @@ import './styles.css';
 
 const ratingList = [1, 2, 3, 4, 5];
 
+const priceByWeight = (price, weight = 1) => `${Math.round(price * weight)}`;
+
 class SaleCard extends React.Component {
+  state = {
+    selectedWeight: null
+  };
+
+  componentDidMount() {
+    this.handleSelect(this.props.weights[0])
+  }
+
+  handleSelect = (selectedWeight) => {
+    this.setState({ selectedWeight});
+  };
   render() {
     return (
       <div className="sale__card">
@@ -58,35 +70,23 @@ class SaleCard extends React.Component {
         <div className="description">
           <a className="description__link" href="#">Сухой корм Acana Lamb & Okanagan Apple для взрослых собак, с ягнёнком и яблоком</a>
         </div>
-        <ul className="weight">
-              <li className="weight-table">
-                <img className="weight-table-icon" src={printIconEmpty} />
-                <div className="weight-table-icon-value">300 гр</div>
-              </li>
-              <li className="weight-table">
-                <img className="weight-table-icon" src={printIconEmpty} />
-                <div className="weight-table-icon-value">1 кг</div>
-              </li>
-              <li className="weight-table">
-                <img className="weight-table-icon" src={printIconEmpty} />
-                <div className="weight-table-icon-value">2 кг</div>
-              </li>
-              <li className="weight-table">
-                <img className="weight-table-icon" src={printIconEmpty} />
-                <div className="weight-table-icon-value">5 кг</div>
-              </li>
-            </ul>
+        <Weights
+          weights={this.props.weights}
+          selectedWeight={this.state.selectedWeight}
+          onSelect={this.handleSelect}
+        />
+
             <div className="price">
             {this.props.salePrice ? (
               <div className="oldprice">
-                  {this.props.price}
+                  {priceByWeight(this.props.price, this.state.selectedWeight)}
                   <span className="oldprice__number">
                       <img className="oldprice__logo" src={roubleSign2} />
                   </span>
               </div>
             ) : null}
             <div className="newprice">
-                {this.props.salePrice ? this.props.salePrice : this.props.price}
+                {priceByWeight(this.props.salePrice ? this.props.salePrice : this.props.price, this.state.selectedWeight)}
                 <span className="newprice__number">
                     <img className="newprice__logo" src={roubleSign1} />
                 </span>

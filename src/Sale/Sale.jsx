@@ -10,23 +10,27 @@ const response = {
       availability: 1,
       rating: 5,
       price: 295,
-      salePrice: 237
+      salePrice: 237,
+      weights: [ 0.3, 1, 2, 5]
     },
     {
       availability: 1,
       rating: 1,
       price: 350,
-      salePrice: 209
+      salePrice: 209,
+      weights: [ 0.3, 1, 2, 5]
     },
     {
       rating: 5,
       price: 99,
-      salePrice: 58
+      salePrice: 58,
+      weights: [ 0.3, 1, 2, 5]
     },
     {
       rating: 0,
       price: 99,
-      salePrice: 58
+      salePrice: 58,
+      weights: [ 0.3, 1, 2, 5]
 
     }
   ],
@@ -44,6 +48,7 @@ class Sale extends React.Component {
                       salePrice={item.salePrice}
                       rating={item.rating}
                       availability={item.availability}
+                      weights={item.weights}
                     />
                   ))}
                 </div>

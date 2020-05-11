@@ -1,10 +1,9 @@
 import * as React from 'react';
 import toSalePercent from '../utils/toSalePercent.js';
+import Wieghts from './../components/weights';
 
-import checkEmpty from './images/check-empty.png';
 import checkIcon from './images/check-icon.png';
 import placeForPhoto from './images/place-for-photo.png';
-import printIconBlue from './images/print-icon-blue.png';
 import roubleSignD from './images/rouble-sign-d.png';
 import roubleSignPromo from './images/rouble-sign-promo.png';
 import roubleSign from './images/rouble-sign.png';
@@ -13,7 +12,24 @@ import starFull from './images/star-full.png';
 
 const ratingList = [1, 2, 3, 4, 5];
 
+const priceByWeight = (price, weight = 1) => price * weight;
+
 class ProductCard extends React.Component {
+  state = {
+    selectedWeight: null
+  };
+
+  componentDidMount() {
+    console.log(this);
+    if (_.size(this.props.weights) > 0) {
+      this.handleSelect(this.props.weights[0]);
+    }
+  }
+
+  handleSelect = (selectedWeight) => {
+    this.setState({ selectedWeight });
+  };
+
   render() {
     return (
       <div className="new-item">
@@ -41,37 +57,24 @@ class ProductCard extends React.Component {
                   </div>
               </div>
               <div className="content-description">
-              Сухой корм Cat Chow Special Care Sterilized для взрослых кошек, Кастрированные или...
+                Сухой корм Cat Chow Special Care Sterilized для взрослых кошек, Кастрированные или...
               </div>
-              <ul className="content-weight">
-                  <li className="content-weight-dose">
-                      <img className="content-weight-dose-icon" src={checkEmpty} />
-                      <div className="content-weight-dose-value">300 гр</div>
-                  </li>
-                  <li className="content-weight-dose">
-                      <img className="content-weight-dose-icon" src={checkEmpty} />
-                      <div className="content-weight-dose-value">1 кг</div>
-                  </li>
-                  <li className="content-weight-dose">
-                      <img className="content-weight-dose-icon" src={checkEmpty} />
-                      <div className="content-weight-dose-value">2 кг</div>
-                  </li>
-                  <li className="content-weight-dose">
-                      <img className="content-weight-dose-icon content-weight-dose-icon-active" src={printIconBlue} />
-                      <div className="content-weight-dose-value">5 кг</div>
-                  </li>
-              </ul>
+              <Wieghts
+                weights={this.props.weights}
+                selectedWeight={this.state.selectedWeight}
+                onSelect={this.handleSelect}
+              />
               <div className="item-total">
                   {this.props.salePrice ? (
                     <div className="total-cost-discount">
-                        {this.props.price}
+                        {priceByWeight(this.props.price, this.state.selectedWeight)}
                         <span className="total-cost-currensy-discount">
                             <img className="total-cost-currense-discount-ru" src={roubleSignD} />
                         </span>
                     </div>
                   ) : null}
                   <div className="total-cost total-cost-promo">
-                      {this.props.salePrice ? this.props.salePrice : this.props.price}
+                      {priceByWeight(this.props.salePrice ? this.props.salePrice : this.props.price, this.state.selectedWeight)}
                       <span className="total-cost-currensy">
                           <img className="total-cost-currensy-ru" src={roubleSignPromo} />
                       </span>

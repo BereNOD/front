@@ -32,7 +32,8 @@ const response = {
     },
     {
       rating: 5,
-      price: 99995
+      price: 99995,
+      weights: [0.3, 1, 2, 5]
     }
   ],
   headers: {}
@@ -49,6 +50,7 @@ class New extends React.Component {
                       price={item.price}
                       salePrice={item.salePrice}
                       rating={item.rating}
+                      weights={item.weights}
                     />
                   ))}
                 </div>

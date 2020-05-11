@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import { withRouter } from 'react-router-dom';
 import SearchIcon from './search-icon';
 
 import './styles.sass';
@@ -7,7 +7,8 @@ import './styles.sass';
 const SearchBar = ({
   action,
   method,
-  onLoaded
+  onLoaded,
+  ...rest
 }) => {
   const [query, setQuery] = React.useState('');
   const [results, setResults] = React.useState({});
@@ -40,6 +41,10 @@ const SearchBar = ({
     },
     [handleSubmit]
   );
+
+  if (_.toLower(method) === 'options') {
+    throw new Error('Can\'t use method "OPTIONS"');
+  }
 
   return (
     <React.Fragment>
@@ -124,4 +129,24 @@ SearchBar.defaultProps = {
 //   );
 // }
 
-export default SearchBar;
+class ErrorHandler extends React.Component {
+  state = {
+    error: null
+  };
+
+  componentDidCatch(error, info) {
+    this.setState({ error });
+  }
+
+  render = () => this.state.error ? this.state.error.message : this.props.children;
+}
+
+const handleError = Component => (props) => {
+  return (
+    <ErrorHandler>
+      <Component {...props} />
+    </ErrorHandler>
+  );
+};
+
+export default handleError(SearchBar);

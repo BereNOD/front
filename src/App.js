@@ -17,6 +17,7 @@ import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
 import New from './pages/new';
+import Grid from './pages/grid';
 import SearchBar from './components/searchBar';
 
 const load = () => new Promise((resolve, reject) => {
@@ -118,12 +119,18 @@ class App extends React.Component {
               <li>
                 <Link to="/banner">Banner</Link>
               </li>
+              <li>
+                <Link to="/grid">Grid</Link>
+              </li>
             </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/grid">
+              <Grid />
+            </Route>
             <Route path="/banner">
               <Banner />
             </Route>

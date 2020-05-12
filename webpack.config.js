@@ -71,12 +71,12 @@ const config = {
         ],
       },
       {
-        test: /\.jpe?g/,
+        test: /\.jpe?g$/,
         use: [
           {
             loader: "url-loader",
             options: {
-              mimetype: "image/jpeg",
+              mimetype: "image/png",
             },
           },
         ],
@@ -107,8 +107,7 @@ const config = {
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     },
-    historyApiFallback: true,
-    useLocalIp: true
+    historyApiFallback: true
   },
   optimization: {
     runtimeChunk: "single",

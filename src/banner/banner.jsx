@@ -9,7 +9,8 @@ import './banner.scss';
 class Banner extends React.Component {
   render() {
     const settings = {
-      mouseDrag: true
+      mouseDrag: true,
+      nav: false
     };
 
     return (

@@ -115,12 +115,18 @@ class App extends React.Component {
               <li>
                 <Link to="/search-bar">Search bar</Link>
               </li>
+              <li>
+                <Link to="/banner">Banner</Link>
+              </li>
             </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/banner">
+              <Banner />
+            </Route>
             <Route path="/search-bar">
               <div
                 style={{

@@ -2,6 +2,7 @@ import React from "react";
 import { hot } from 'react-hot-loader/root';
 import Ads from './ads/index.jsx';
 import Banner from './banner/banner.jsx';
+import Modal from 'react-modal';
 // import New from './new/new.jsx';
 import {
   BrowserRouter,
@@ -52,7 +53,8 @@ class Loader extends React.Component {
 class App extends React.Component {
   state = {
     posts: [],
-    error: null
+    error: null,
+    modalOpened: false
   };
 
   componentDidMount = async () => {
@@ -73,6 +75,10 @@ class App extends React.Component {
     console.log(error, info);
     this.setState({ error });
   }
+
+  handleToggleModal = () => {
+    this.setState(({ modalOpened }) => ({ modalOpened: !modalOpened }));
+  };
 
   render() {
     return (
@@ -128,7 +134,6 @@ class App extends React.Component {
               >
                 <SearchBar
                   action="/search"
-                  method="OPTIONS"
                   onLoaded={(error, posts) => {
                     if (error) {
                       this.setState({ error });
@@ -156,6 +161,17 @@ class App extends React.Component {
               <Home />
             </Route>
           </Switch>
+          <button
+            onClick={this.handleToggleModal}
+          >
+            Открыть
+          </button>
+          <Modal
+            isOpen={this.state.modalOpened}
+            onRequestClose={this.handleToggleModal}
+          >
+            Modal
+          </Modal>
         </div>
       </BrowserRouter>
     );

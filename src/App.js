@@ -2,6 +2,7 @@ import React from "react";
 import { hot } from 'react-hot-loader/root';
 import Ads from './ads/index.jsx';
 import Banner from './banner/banner.jsx';
+import Modal from 'react-modal';
 // import New from './new/new.jsx';
 import {
   BrowserRouter,
@@ -16,6 +17,7 @@ import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
 import New from './pages/new';
+import Grid from './pages/grid';
 import SearchBar from './components/searchBar';
 
 const load = () => new Promise((resolve, reject) => {
@@ -52,7 +54,8 @@ class Loader extends React.Component {
 class App extends React.Component {
   state = {
     posts: [],
-    error: null
+    error: null,
+    modalOpened: false
   };
 
   componentDidMount = async () => {
@@ -73,6 +76,10 @@ class App extends React.Component {
     console.log(error, info);
     this.setState({ error });
   }
+
+  handleToggleModal = () => {
+    this.setState(({ modalOpened }) => ({ modalOpened: !modalOpened }));
+  };
 
   render() {
     return (
@@ -109,12 +116,24 @@ class App extends React.Component {
               <li>
                 <Link to="/search-bar">Search bar</Link>
               </li>
+              <li>
+                <Link to="/banner">Banner</Link>
+              </li>
+              <li>
+                <Link to="/grid">Grid</Link>
+              </li>
             </ul>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
+            <Route path="/grid">
+              <Grid />
+            </Route>
+            <Route path="/banner">
+              <Banner />
+            </Route>
             <Route path="/search-bar">
               <div
                 style={{
@@ -128,7 +147,6 @@ class App extends React.Component {
               >
                 <SearchBar
                   action="/search"
-                  method="OPTIONS"
                   onLoaded={(error, posts) => {
                     if (error) {
                       this.setState({ error });
@@ -156,6 +174,17 @@ class App extends React.Component {
               <Home />
             </Route>
           </Switch>
+          <button
+            onClick={this.handleToggleModal}
+          >
+            Открыть
+          </button>
+          <Modal
+            isOpen={this.state.modalOpened}
+            onRequestClose={this.handleToggleModal}
+          >
+            Modal
+          </Modal>
         </div>
       </BrowserRouter>
     );

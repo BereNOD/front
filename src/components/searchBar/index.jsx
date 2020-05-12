@@ -42,9 +42,9 @@ const SearchBar = ({
     [handleSubmit]
   );
 
-  if (_.toLower(method) === 'options') {
-    throw new Error('Can\'t use method "OPTIONS"');
-  }
+  // if (_.toLower(method) === 'options') {
+  //   throw new Error('Can\'t use method "OPTIONS"');
+  // }
 
   return (
     <React.Fragment>

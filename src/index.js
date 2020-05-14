@@ -7,6 +7,6 @@ import "./styles.scss";
 import "./styles.less";
 
 ReactDOM.render(
-  <App name="Jane" />,
+  <App />,
   document.getElementById("app")
 );

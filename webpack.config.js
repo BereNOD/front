@@ -14,7 +14,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         use: "babel-loader",
         exclude: /node_modules/,
       },
@@ -94,6 +94,7 @@ const config = {
       template: require("html-webpack-template"),
       inject: true,
       appMountId: "app",
+      baseHref: '/'
     }),
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en/),
     new LodashModuleReplacementPlugin(),

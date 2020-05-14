@@ -128,17 +128,14 @@
 
 .arrow {
 	position: absolute;
-    right: 100%;
-    display: flex;
-    padding-right: 44px;
-    bottom: 0;
-}
-
-.arrow_left {
-	margin-right: 16px;
+  right: 100%;
+  display: flex;
+  padding-right: 44px;
+  bottom: 0;
 }
 
 .arrow_left, .arrow_right {
 	border: none;
 	background: none;
+	padding: 10px 8px;
 }

@@ -18,6 +18,7 @@ import About from './pages/about';
 import Users from './pages/users';
 import Button from './pages/button';
 import New from './pages/new';
+import Sale from './pages/sale';
 import Grid from './pages/grid';
 import SearchBar from './components/searchBar';
 

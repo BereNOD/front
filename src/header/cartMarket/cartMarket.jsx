@@ -1,8 +1,8 @@
 import React from 'react';
 
 import cart_icon from "./cart_icon.png";
-import '../header.scss';
 import './cartMarket.sass';
+
 
 class cartMarket extends React.Component {
   render() {

@@ -70,6 +70,17 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.jpe?g/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              mimetype: "image/jpeg",
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {

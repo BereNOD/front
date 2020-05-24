@@ -3,7 +3,7 @@ import React from 'react';
 import phone_icon from "./img/phone_icon.png";
 import location_icon from "./img/location_icon.png";
 import './contacts.sass'
-import '../header.scss';
+
 
 class contacts extends React.Component {
   render() {
@@ -15,10 +15,6 @@ class contacts extends React.Component {
             <span className="Contact_data">+7(930) 635-65-25
           </span>
         </a>
-
-
-
-
 
         <a className="Contact_geo" link="white" hover='#68D6F4' href="#">
            <img height="18" width="15" src={location_icon}/>
